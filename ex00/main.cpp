@@ -6,10 +6,11 @@ int main(void) {
 
 	char x = 42;
 	char z = 60;
+	std::cout<<std::endl;
 	std::cout<<"MY OWN TESTER ================="<<std::endl;
 	std::cout<<"A Before swap: "<<x<<std::endl;
 	std::cout<<"B Before swap: "<<z<<std::endl;
-	swap(&x, &z);
+	swap(x, z);
 	std::cout<<"A After swap: "<<x<<std::endl;
 	std::cout<<"B After swap: "<<z<<std::endl;
 
@@ -18,6 +19,7 @@ int main(void) {
 
 	int a = 2;
 	int b = 3;
+	std::cout<<std::endl;
 	std::cout<<"PDF TESTER ===================="<<std::endl;
 	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
