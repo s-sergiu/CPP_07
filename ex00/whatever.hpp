@@ -1,10 +1,10 @@
 
 template<typename T>
-void swap(T *arg1, T *arg2) {
+void swap(T &arg1, T &arg2) {
 	T temp;
-	temp = *arg1;
-	*arg1 = *arg2;
-	*arg2 = temp;
+	temp = arg1;
+	arg1 = arg2;
+	arg2 = temp;
 }
 
 template<typename T>
