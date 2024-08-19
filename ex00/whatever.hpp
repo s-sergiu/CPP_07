@@ -1,4 +1,7 @@
 
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
+
 template<typename T>
 void swap(T &arg1, T &arg2) {
 	T temp;
@@ -20,3 +23,5 @@ T max(T arg1, T arg2) {
 		return arg1;
 	return arg2;
 }
+
+#endif
