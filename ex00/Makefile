@@ -1,12 +1,10 @@
-NAME = convert
+NAME = main
 CC = c++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
 SRC = main.cpp \
-	  ScalarConverter.cpp \
 
 OBJ = main.o \
-	  ScalarConverter.o \
 
 all:$(NAME)
 
