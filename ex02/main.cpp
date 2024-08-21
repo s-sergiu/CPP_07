@@ -26,11 +26,12 @@ int main(void) {
 
 		arrInt arr_int_emtpy;
 		arrInt arr_int(2);
-		arrInt arr_int2(2);
+		arrInt arr_int2(3);
 		arr_int[0] = 1;
 		arr_int[1] = 2;
 		arr_int2[0] = 3;
 		arr_int2[1] = 4;
+		arr_int2[2] = 5;
 		arr_int = arr_int2;
 		x = arr_int.size();
 		std::cout<<"size is: "<<x<<std::endl;
