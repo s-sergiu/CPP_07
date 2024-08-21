@@ -13,7 +13,9 @@ Array<T>::Array(unsigned int n) {
 
 template<typename T>
 Array<T>::Array(const Array &src) {
-	this->arr = src.arr;
+	this->arr = new T[src.m_size];
+	for (unsigned int i = 0; i < src.m_size; i++)
+		this->arr[i] = src.arr[i];
 	this->m_size = src.m_size;
 }
 
@@ -24,15 +26,17 @@ Array<T>::~Array(void) {
 
 template<typename T>
 Array<T> Array<T>::operator = (const Array &src) {
-	this->arr = src.arr;
+	this->arr = new T[src.m_size];
+	for (unsigned int i = 0; i < src.m_size; i++)
+		this->arr[i] = src.arr[i];
 	this->m_size = src.m_size;
 	return *this;
 }
 
 template<typename T>
-int Array<T>::size(void) {
+unsigned int Array<T>::size(void) {
 	unsigned int i = 0;
-	while (i < this->m_size)
+	while (i < m_size)
 		i++;
 	return i;
 }
