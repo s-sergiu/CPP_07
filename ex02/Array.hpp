@@ -60,7 +60,9 @@ int Array<T>::size(void) {
 
 template<typename T>
 T& Array<T>::operator [] (unsigned int i) {
-		return arr[i];
+	if (i >= m_size)
+		throw "out of range";
+	return arr[i];
 }
 
 #endif
