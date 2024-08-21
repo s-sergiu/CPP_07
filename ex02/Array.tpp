@@ -34,7 +34,7 @@ Array<T> Array<T>::operator = (const Array &src) {
 }
 
 template<typename T>
-unsigned int Array<T>::size(void) {
+unsigned int Array<T>::size(void) const {
 	unsigned int i = 0;
 	while (i < m_size)
 		i++;
@@ -42,7 +42,7 @@ unsigned int Array<T>::size(void) {
 }
 
 template<typename T>
-T& Array<T>::operator [] (unsigned int i) {
+T& Array<T>::operator [] (unsigned int i) const {
 	if (i >= m_size)
 		throw std::out_of_range("Index out of range");
 	return arr[i];
