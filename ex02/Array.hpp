@@ -3,6 +3,7 @@
 #define ARRAY_HPP
 
 #include <iostream>
+#include <stdexcept>
 
 template<typename T>
 class Array {
@@ -61,7 +62,7 @@ int Array<T>::size(void) {
 template<typename T>
 T& Array<T>::operator [] (unsigned int i) {
 	if (i >= m_size)
-		throw "out of range";
+		throw std::out_of_range("Index out of range");
 	return arr[i];
 }
 
